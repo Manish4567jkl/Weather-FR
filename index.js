@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import chalk from 'chalk';
 import inquirer from 'inquirer';
 import gradient from 'gradient-string';
@@ -44,12 +45,12 @@ async function showWeather() {
     }
     const data = await response.json();
     console.log(
-      gradient.morning(`Weather : ${data.weather[0].main}`),
-      gradient.morning(`Description : ${data.weather[0].description}`),
-      gradient.pastel(`Temperature : ${data.main.temp} `),
-      gradient.cristal(`Minimum-Temperature : ${data.main.temp_min} `),
-      gradient.fruit(`Maximum-Temperature : ${data.main.temp_max} `),
-      gradient.instagram(`Humidity : ${data.main.humidity} `)
+      gradient.cristal(`Weather : ${data.weather[0].main}`),
+      gradient.cristal(`Description : ${data.weather[0].description}`),
+      gradient.cristal(`Temperature : ${data.main.temp}^C`),
+      gradient.cristal(`Minimum-Temperature : ${data.main.temp_min}^C`),
+      gradient.cristal(`Maximum-Temperature : ${data.main.temp_max}^C`),
+      gradient.cristal(`Humidity : ${data.main.humidity} `)
     );
   } catch (error) {
     console.error(`Error: ${error.message}`);
