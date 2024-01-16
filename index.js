@@ -45,12 +45,12 @@ async function showWeather() {
     }
     const data = await response.json();
     console.log(
-      gradient.cristal(`Weather : ${data.weather[0].main}`),
-      gradient.cristal(`Description : ${data.weather[0].description}`),
-      gradient.cristal(`Temperature : ${data.main.temp}^C`),
-      gradient.cristal(`Minimum-Temperature : ${data.main.temp_min}^C`),
-      gradient.cristal(`Maximum-Temperature : ${data.main.temp_max}^C`),
-      gradient.cristal(`Humidity : ${data.main.humidity} `)
+      gradient.cristal(` Weather : ${data.weather[0].main} \n`),
+      gradient.cristal(`Description : ${data.weather[0].description} \n`),
+      gradient.cristal(`Temperature : ${data.main.temp}^C \n`),
+      gradient.cristal(`Minimum-Temperature : ${data.main.temp_min}^C \n`),
+      gradient.cristal(`Maximum-Temperature : ${data.main.temp_max}^C \n`),
+      gradient.cristal(`Humidity : ${data.main.humidity} \n`)
     );
   } catch (error) {
     console.error(`Error: ${error.message}`);
